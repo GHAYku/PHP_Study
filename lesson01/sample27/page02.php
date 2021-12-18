@@ -8,6 +8,6 @@
 </head>
 <body>
     変数の値: <?php echo $value; ?><br>
-    Cookiの値: <?php echo $_COOKIE['message']; ?>
+    Cookieの値: <?php echo $_COOKIE['message']; ?>
 </body>
 </html>
