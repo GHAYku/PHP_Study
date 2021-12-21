@@ -9,8 +9,13 @@
 <body>
 <?php
       $db = new mysqli('localhost:8889','root','root','mydb');
-      $message = "フォームから入力した値";
-      $ret = $db->query('insert into memos(memo) values("PHPからのメモです")');
+      $message = "フォームからのメモです";
+      $stmt = $db->prepare('insert into memos(memo) values(?)');
+      if (!$stmt):
+        die($db->error);
+      endif;
+      $stmt->bind_param('s',$message);
+      $ret = $stmt->execute();
       if ($ret):
         echo 'データを挿入しました';
       else:
