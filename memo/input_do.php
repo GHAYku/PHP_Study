@@ -1,6 +1,6 @@
 <?php
     $memo = filter_input(INPUT_POST,"memo",FILTER_SANITIZE_SPECIAL_CHARS);
-    $db = new mysqli('localhost:8889','root','root','mydb');
+    require('db_connect.php');
     $stmt = $db->prepare('insert into memos(memo) values(?)');
     if(!$stmt):
       die($db->error);
