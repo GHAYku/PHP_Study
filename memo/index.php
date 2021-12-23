@@ -1,5 +1,9 @@
 <?php
 require('db_connect.php');
+/* 最大ページ数を求める */
+$count = $db->query('select count(*) as cnt from memos');
+$count = $count->fetch_assoc();
+$max_page = floor(($count['cnt']+1)/5+1);
 $stmt = $db->prepare('select * from memos order by id desc limit ?, 5');
 if(!$stmt){
   die($db->error);
@@ -21,11 +25,9 @@ $result=$stmt->execute();
 <body>
   <h1>メモ帳</h1>
   <p>→<a href="input.html">新しいメモ</a></p>
-
   <?php if(!$result): ?>
     <p>表示するメモはありません</p>
   <?php endif; ?>
-  <?php echo $result ?>
   <?php $stmt->bind_result($id, $memo, $created); ?>
   <?php while($stmt->fetch()): ?>
       <div>
@@ -34,5 +36,15 @@ $result=$stmt->execute();
       </div>
     <hr>
   <?php endwhile ?>
+
+  <p>
+      <?php if($page>1): ?>
+        <a href="?page=<?php echo $page-1; ?>"><?php echo $page-1; ?>ページ目へ</a> | 
+      <?php endif ?>
+      <?php if ($page<$max_page): ?>
+        <a href="?page=<?php echo $page+1; ?>"><?php echo $page+1; ?>ページ目へ</a>
+      <?php endif ?>
+  </p>
+
 </body>
 </html>
