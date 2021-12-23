@@ -23,7 +23,8 @@ if(!$result){
 </head>
 <body>
   <form action="update_do.php" method="post">
-    <textarea name="memo" cols="50" rows="10" placeholder="メモを入力してください"><?php echo $memo; ?></textarea><br>
+  <input type = "hidden" name="id" value="<?php echo $id; ?>">
+  <textarea name="memo" cols="50" rows="10" placeholder="メモを入力してください"><?php echo $memo; ?></textarea><br>
     <button type="submit">編集する</button>
   </form>
 </body>
