@@ -14,3 +14,14 @@
  * 合計金額が0円の場合
  * 「何か商品を買いましょう。」と表示
  */
+
+
+$price = 100;
+$amount = 5;
+$sun = $price*$amount;
+
+if(empty($sun)) {
+  echo '何か商品を買いましょう。';
+} else {
+  echo "{$price}円の商品を{$amount}個買ったので合計金額は{$sun}円です。";
+}
