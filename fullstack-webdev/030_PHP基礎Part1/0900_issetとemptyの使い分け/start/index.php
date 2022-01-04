@@ -17,3 +17,9 @@
 
 $a = 0;
 $b = 1;
+
+if(empty($a)){
+  echo 'true';
+} else {
+  echo 'false';
+}
