@@ -10,3 +10,5 @@ echo $arry['name'];
 $arry['age'] += 24;
 echo $arry['age'];
 echo $arry['sports'][1];
+
+?>
