@@ -19,6 +19,12 @@ $products = [
  * lightは5000円で1個存在します。
  */
 echo '<div>商品一覧</div>';
+foreach($products as $key => $val){
+
+    $p_name = $key;
+    $p_amount = $val[1];
+    echo "<div>"."{$key}は{$val[0]}円で{$val[1]}個存在します。"."</div>";
+}
 
 
  
@@ -42,3 +48,18 @@ $cart = [
     'bed' => 2,
 ];
 echo '<div>商品購入</div>';
+foreach($cart as $key => $val){
+    $c_name = $key;
+    $c_amount = $val;
+
+    echo "{$c_name}を{$c_amount}個ください。";
+
+    $p_amount = $products[$c_name][1];
+    if($c_amount <= $p_amount){
+        echo "<div>はい。ありがとうございます。</div>";
+    }else {
+        echo "<div>すいません。{$c_name}は{$p_amount}個しかありません。</div>";
+    }
+}
+
+?>
