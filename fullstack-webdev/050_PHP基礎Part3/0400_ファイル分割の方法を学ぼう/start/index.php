@@ -8,3 +8,10 @@
 $arry = [
     'num' => 0
 ];
+
+include('file.php');
+// require('file1.php');
+// require_once('file2.php');
+// require_once('file2.php');
+// fn1();
+echo $arry['num'];
