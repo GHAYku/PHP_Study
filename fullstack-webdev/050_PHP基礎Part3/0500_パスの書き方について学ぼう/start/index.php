@@ -8,3 +8,5 @@
  * - \と/は使い分けよう
  * - "と'は使い分けよう
  */
+echo dirname(__FILE__,2);
+require __DIR__.'/sub/file2.php';
