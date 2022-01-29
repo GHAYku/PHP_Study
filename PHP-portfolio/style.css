@@ -7,6 +7,10 @@
   word-wrap: break-word
 }
 
+.wf-sawarabimincho { font-family: "Sawarabi Mincho"; }
+.wf-hannari { font-family: "Hannari"; }
+
+
 header{
   background: #000000;
   position: fixed;
@@ -24,4 +28,135 @@ header .container_logout {
   flex-wrap: nowrap;
   flex-direction: row;
   background: #000000;
+}
+
+.top_container {
+  background: #fffaf0;
+  height: auto;
+  width: 100%;
+ }
+
+ .container, .home_container {
+  max-width: 1000px;
+  margin: 50px auto 50px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ }
+
+ .top_about {
+  background: #FFF;
+  padding: 30px 25px;
+  border: outset 8px;
+  border-radius: 10px;
+  display: block;
+  width: 450px;
+  box-shadow: 6px 6px 6px;
+ }
+
+ .top_title {
+  text-align: center;
+  color: #252625;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-family: 'Yuji Boku', serif;
+  font-size: 40px;
+ }
+
+ .top_list{
+  font-family: "Sawarabi Mincho";
+  color: #252625;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-left: 10px;
+  font-weight: bold;
+  }
+
+  .top_login {
+    background-color: #FFF;
+    padding: 30px 25px;
+    border: outset 8px;
+    border-radius: 10px;
+    display: block;
+    width: 450px;
+    box-shadow: 6px 6px 6px;
+   }
+
+   .other_login h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: solid 2px #353435;
+    font-family: 'Yuji Boku', serif;
+    font-size: 30px;
+   }
+
+   .site_scription {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    background: #ffffe0;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: outset 8px #fafad2;
+    box-shadow: 6px 6px 6px;
+   }
+
+   body {
+    height: 100%;
+    background-color: #fffaf0;
+    padding-top: 150px;
+    padding-bottom: 150px;
+   }
+   
+   header{
+   background: #000000;
+   position: fixed;
+   width: 100%;
+   z-index: 10;
+   top: 0;
+   left: 0;
+   }
+
+   .log {
+    text-align: center;
+    margin-left: 30px;
+}
+
+.btn-BAKUSHOW {
+  color: #FFF;
+  border-radius: 7px;
+  display: inline-block;
+  display: flex;
+  height: 50px;
+  width: 380px;
+  text-align: center;
+  font-size: 25px;
+  line-height: 50px;
+  background: #000000;
+  overflow: hidden;
+  margin: 15px 0 10px 0;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Sawarabi Mincho";
+ }
+
+ .btn-BAKUSHOW span {
+  display: inline-block;
+  transition: .5s;
+ }
+ .btn-BAKUSHOW:hover span{
+  -webkit-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+ }
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    background: #000000;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
 }
