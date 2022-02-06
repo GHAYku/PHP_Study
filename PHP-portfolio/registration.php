@@ -63,19 +63,19 @@
    <h2>アカウント作成</h2>
    <form action="" method="post">
     <dl>
-      <input class= "form" type="text" name="name" size="35" maxlength="255" value="<?php echo h($form['name']); ?>"/>
+      <input class= "form" type="text" name="name" size="35" maxlength="255" value="<?php echo h($form['name']); ?>" placeholder="ニックネーム"/>
       <?php if(isset($error['name']) && $error['name'] === 'blank'): ?>
        <p class="error">* ニックネームを入力してください</p>
       <?php endif; ?>
 
-      <input class= "form" type="text" name="email" size="35" maxlength="255" value="<?php echo h($form['email']); ?>"/>
+      <input class= "form" type="text" name="email" size="35" maxlength="255" value="<?php echo h($form['email']); ?>"  placeholder="メールアドレス"/>
       <?php if(isset($error['email']) && $error['email'] === 'blank'): ?>
        <p class="error">* メールアドレスを入力してください</p>
       <?php endif ?>
       <?php if(isset($error['email']) && $error['email'] === 'duplicate'): ?>
        <p class="error">* 指定されたメールアドレスはすでに登録されています。</p>
       <?php endif ?>
-      <input class= "form" type="password" name="password" size="10" maxlength="20" value="<?php echo h($form['password']); ?>"/>
+      <input class= "form" type="password" name="password" size="10" maxlength="20" value="<?php echo h($form['password']); ?>" placeholder="パスワード"/>
       <?php if(isset($error['password']) && $error['password'] === 'blank'): ?>
        <p class="error">* パスワードを入力してください</p>
       <?php endif ?>
