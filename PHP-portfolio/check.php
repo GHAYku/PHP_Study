@@ -9,17 +9,14 @@ if (isset($_SESSION['form'])) {
   exit();
 }
 
-$form['picture'] = '';
-
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $db = dbconnect();
-  $stmt = $db->prepare('insert into users(name,email,password,picture) VALUES(?,?,?,?)');
+  $stmt = $db->prepare('insert into users(name,email,password,picture) VALUES(?,?,?)');
   if (!$stmt) {
     die($db->error);
   }
   $password = password_hash($form['password'],PASSWORD_DEFAULT);
-  $stmt->bind_param('ssss', $form['name'], $form['email'],$password,$form['picture']);
+  $stmt->bind_param('ssss', $form['name'], $form['email'],$password);
   $success = $stmt->execute();
   if (!$success) {
     die($db->error);
