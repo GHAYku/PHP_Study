@@ -18,7 +18,11 @@
       <img src="LOGO.PNG" >
      </a>
     </div>
-   </div>
+    <?php if (isset($_SESSION['name']) && isset($_SESSION['id'])): ?>
+     <div>
+      <a href="logout.php?id=" class="btns">ログアウト</a>
+     </div>
+    <?php endif; ?>
   </header>
   <footer>
     <div class="container">

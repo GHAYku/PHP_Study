@@ -380,3 +380,37 @@ footer {
   display: flex;
   justify-content: space-around;
 }
+
+.post_body_form {
+    padding: 3px;
+}
+
+.account_date {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.account_name {
+  color: #000000;
+  font-family: "Yuji Boku", serif;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.post_body {
+  color: #000000;
+  font-family: "Sawarabi Mincho";
+}
+
+.btns {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #000000;
+  font-family: "Sawarabi Mincho";
+  display: block;
+  border-radius: 5px;
+  color: #FFF;
+}
